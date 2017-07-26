@@ -11,6 +11,7 @@ On Mac you can schedule a tweet to Republican senators every two minutes like th
 
 ## If you're a Developer on a mac already this should probably work:
 `git clone https://github.com/fernando-mc/save-healthcare.git`
+
 `brew install watch && watch -n120 "python save_healthcare.py"`
 
 ## Otherwise here's a longer version for less technical folks:
@@ -19,8 +20,10 @@ First - Search your Mac Programs
 Next - Open the `Terminal` application
 Last - Copy and paste in this command. The detailed command is explained below for the reasonably suspicous:
 
-```
+```bash
+
 cd ~/Desktop && xcode-select --install && ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" && brew install python && pip install virtualenv && virtualenv env && source env/bin/activate && pip install Twython && brew install git && git clone https://github.com/fernando-mc/save-healthcare.git && open -a TextEdit ./creds.json && open https://apps.twitter.com/
+
 ```
 
 ### EXPLAINATION OF THE COMMANDS:
