@@ -25,11 +25,15 @@ potential_tweets = [
     'Please dont repeal the ACA {0}. The country needs it. https://www.wired.com/2017/01/not-even-insurance-companies-want-obamacare-repealed/',
 ]
 
-def send_tweet(tweet_text):
-    """Sends a tweet to Twitter"""
-    twitter.update_status(status = tweet_text)
+def send_tweet():
+    """
+    Sends random tweet from list of potential tweets 
+    and populates it with a republican twitter handle
+    """
+    unformatted_tweet = random.choice(potential_tweets)
+    random_republican = random.choice(REPUBLICANS)
+    tweet_text = unformatted_tweet.format(random_republican)
+    twitter.update_status(status=tweet_text)
 
-def handler(event,context):
-    """Sends random tweet from list of potential tweets"""
-    send_tweet(random.choice(potential_tweets.format(random.choice(REPUBLICANS))))
-
+if __name__ == "__main__":
+    send_tweet()
