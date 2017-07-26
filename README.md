@@ -22,7 +22,14 @@ Last - Copy and paste in this command. The detailed command is explained below f
 
 ```bash
 
-cd ~/Desktop && xcode-select --install && ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" && brew install python && pip install virtualenv && virtualenv env && source env/bin/activate && pip install Twython && brew install git && git clone https://github.com/fernando-mc/save-healthcare.git && open -a TextEdit ./creds.json && open https://apps.twitter.com/
+cd ~/Desktop && \
+xcode-select --install && \
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" && \
+brew install python && pip install virtualenv && \
+virtualenv env && source env/bin/activate \
+&& pip install Twython && brew install git && \
+git clone https://github.com/fernando-mc/save-healthcare.git && \
+open -a TextEdit ./creds.json && open https://apps.twitter.com/
 
 ```
 
