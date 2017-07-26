@@ -5,3 +5,7 @@
 **DON'T COMMIT YOUR CREDENTIALS THEY ALLOW ACCESS TO YOUR TWITTER ACCOUNT**
 3. Edit the base tweets in save_healthcare.py and add more if you want.
 4. Start sending tweets: `python save_healthcare.py`
+
+
+On Mac you can schedule a tweet to Republican senators every two minutes like this:
+`brew install watch && watch -n120 "python save_healthcare.py"`
